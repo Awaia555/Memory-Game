@@ -1,0 +1,55 @@
+/* Card flip animation styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Star celebration animations */
+@keyframes star-animation-1 {
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  100% { transform: scale(1.5) rotate(360deg); opacity: 0; }
+}
+
+@keyframes star-animation-2 {
+  0% { transform: scale(0) rotate(90deg); opacity: 1; }
+  100% { transform: scale(1.2) rotate(-270deg); opacity: 0; }
+}
+
+@keyframes star-animation-3 {
+  0% { transform: scale(0) rotate(-90deg); opacity: 1; }
+  100% { transform: scale(1.3) rotate(180deg); opacity: 0; }
+}
+
+.stars-1, .stars-2, .stars-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #ffd700 25%, transparent 26%);
+  background-size: 10px 10px;
+}
+
+.stars-1 {
+  animation: star-animation-1 0.75s ease-out forwards;
+}
+
+.stars-2 {
+  animation: star-animation-2 0.75s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.stars-3 {
+  animation: star-animation-3 0.75s ease-out forwards;
+  animation-delay: 0.2s;
+}
